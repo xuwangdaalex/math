@@ -46,11 +46,11 @@
         <button class="btn btn-primary center-block full-width" ng-click="startTest()" ng-if="showStartBtn">{{startTestButtonText}}</button>
 
         <div class="resultPanel" ng-class="{expand: showResultPanel}">
-          <div class="text-center">
-            <div id="circle"></div>
-            <div>Result: {{myCorrectAnswers}}/{{selectedAmount}}</div>
-            <div>Time Spent: {{timeCount}}</div>
-          </div>
+            <div class="text-center">
+                <div id="circle"></div>
+                <div>Result: {{myCorrectAnswers}}/{{selectedAmount}}</div>
+                <div>Time Spent: {{timeCount}}</div>
+            </div>
         </div>
 
         <div ng-include="'view-easy.html'" ng-if="selectedLevel == 'Easy' && isTestStart"></div>
@@ -60,7 +60,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.6.2/angular-touch.min.js"></script>
         <script src="js/angular-carousel.min.js"></script>
-          <script src="js/circle-progress.min.js"></script>
+        <script src="js/circle-progress.min.js"></script>
 
         <script src="js/main.js"></script>
 

@@ -1,8 +1,8 @@
 .full-width {
   width: 100%;
 }
-html,
-body {
+body,
+html {
   font-family: 'Caveat Brush', cursive;
   background: #3E76A5;
   width: 100%;
@@ -15,7 +15,7 @@ body {
 .mainContainer {
   width: 100%;
   min-height: 100%;
-  max-width: 480px;
+  max-width: 520px;
   margin: 0 auto;
   background: #fff;
   padding: 30px;

@@ -1,15 +1,15 @@
 <div class="questionsPanel">
-  <div class="questionItem flex-container" ng-repeat = "q in questionsAndAnswers">
-      <div class="flex-item" style="width:70%">{{q.question}}</div>
-      <div class="flex-item">
-        <input ng-model="q.myAnswer" type="tel" />
-        <div class="resultIconContainer">
-          <i class="fa fa-check" style="color:green" ng-if="q.isCorrect && showCorrectAnswers"></i>
-          <i class="fa fa-times" style="color:red" ng-if="!q.isCorrect && showCorrectAnswers"></i>
+    <div class="questionItem flex-container" ng-repeat="q in questionsAndAnswers">
+        <div class="flex-item" style="width:70%">{{q.question}}</div>
+        <div class="flex-item">
+            <input ng-model="q.myAnswer" type="tel" />
+            <div class="resultIconContainer">
+                <i class="fa fa-check" style="color:green" ng-if="q.isCorrect && showCorrectAnswers"></i>
+                <i class="fa fa-times" style="color:red" ng-if="!q.isCorrect && showCorrectAnswers"></i>
+            </div>
         </div>
-      </div>
-  </div>
+    </div>
 </div>
 <div class="flex-container">
-  <div class="flex-item text-right"><button class="btn btn-primary" ng-click="checkMyAnswers()">Submit</button></div>
+    <div class="flex-item text-right"><button class="btn btn-primary" ng-click="checkMyAnswers()">Submit</button></div>
 </div>

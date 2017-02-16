@@ -45,6 +45,11 @@ app.controller('mainCtrl', function($scope, $interval) {
         for (i = 0; i < $scope.selectedAmount; i++) {
             var num1 = Math.floor((Math.random() * 9 + 1));
             var num2 = Math.floor((Math.random() * 9 + 1));
+            if (num2 > num1) {
+                var temp = num2;
+                num2 = num1;
+                num1 = temp;
+            }
             var operator = $scope.operators[Math.floor((Math.random() * 2))];
             var result = eval(num1 + operator + num2);
             var questionString = num1 + ' ' + operator + ' ' + num2 + " = ";
@@ -115,13 +120,13 @@ app.controller('mainCtrl', function($scope, $interval) {
     }
 
     //jquery plugin
-    var drawCircle = function(){
-      $('#circle').circleProgress({
-          value: $scope.myCorrectAnswers/$scope.selectedAmount,
-          size: 80,
-          fill: {
-              gradient: ['#0681c4', '#0681c4']
-          }
-      })
+    var drawCircle = function() {
+        $('#circle').circleProgress({
+            value: $scope.myCorrectAnswers / $scope.selectedAmount,
+            size: 80,
+            fill: {
+                gradient: ['#0681c4', '#0681c4']
+            }
+        })
     }
 });
